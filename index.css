@@ -1,0 +1,262 @@
+body{
+    background-color:rgb(255, 255, 255);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0%;
+}
+
+
+.header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 60px;
+    opacity: 0.6;
+    background-color:black;
+    -webkit-box-shadow: 0 2px 6px white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+    z-index: 10;
+}
+.headerNavOuter {
+    margin-bottom: 0;
+    position: relative;
+}
+
+
+.headerNav {
+    position: fixed;
+    right: -250px;/*右側に隠しておく*/
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    padding-top: 40px;
+    background-color:black;
+    -webkit-transition: all .6s;
+    transition: all .6s;
+    z-index: 20;
+    overflow-y: auto;
+}
+.navList {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+}
+.navItem {
+    padding: 1rem 1rem 0;
+}
+.navItem a {
+    display: block;
+    border-bottom: 1px solid #eee;
+    color:white;
+    padding: 4rem 0 1rem;
+    width: 100%;
+    margin: 0 auto;
+}
+/* End ナビゲーション */
+
+/* Start ハンバーガーボタン(三本線の実装) */
+.hamburger_btn {
+    position: absolute;/*.headerNavOuterを基準にして、絶対配置*/
+    right: 0;
+    top: 0;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    z-index: 30;
+}
+.hamburger_line {
+    position: absolute;/*.headerNavOuterを基準にして、絶対配置*/
+    left: 8px;
+    width: 25px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: all .6s;
+    transition: all .6s;
+}
+.hamburger_line_1 {
+    top: 20px;
+}
+.hamburger_line_2 {
+    top: 26px;
+}
+.hamburger_line_3 {
+    top: 32px;
+}
+/* End ハンバーガーボタン(三本線の実装) */
+
+/*ハンバーガーメニュをクリックした後に現れる半透明の背景*/
+.black-bg {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color:rgb(34, 34, 34);
+    opacity: 0;
+    visibility: hidden;/* 非表示にしておきます */
+    -webkit-transition: all .6s;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+/* Start ハンバーガーボタンをクリックした際の動き */
+/* ナビゲーションが現れる */
+.nav-open .headerNav {
+    right: 0;
+}
+
+/* 半透明の背景を表示させます。 */
+.nav-open .black-bg {
+    opacity: .8;
+    visibility: visible;
+}
+
+/* 三本線のハンバーガーを、バッテンにします */
+.nav-open .hamburger_line_1 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 25px;
+}
+.nav-open .hamburger_line_2 {
+    width: 0;
+    left: 50%;
+}
+.nav-open .hamburger_line_3 {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 25px;
+}
+
+
+
+  
+.top-wrapper{
+    background-image: url(IMG_3604.jpg);
+    height: 890px;
+    width: 100%;
+    background-size: cover;
+}
+
+.name{
+    float:left;
+    margin-top: 270px;
+    margin-left: 60px;
+
+}
+
+.name h1{
+    font-size: 60px;
+    text-align: center;
+}
+.name h2{
+    font-size: 45px;
+    text-align: center;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.explain p{
+    text-align: center;
+}
+
+
+.explain-wrapper{
+    margin: 50px;
+    text-align: center;
+    background-color: whitesmoke;
+    padding-bottom: 30px;
+    margin-top: 50px;
+}
+.explain-wrapper h2{
+    font-size: 60px;
+}
+
+.tytle{
+    margin-bottom: 60px;
+}
+
+.explain-photo{
+    float: left;
+    width: 50%;
+    height:600px;
+}
+
+.top-img{
+    width:400px ;
+    height:550px;
+}
+
+.explain-sentence{
+    margin-top: 130px;
+    line-height: 35px;
+}
+
+.photo-wrapper{
+    margin: 50px;
+    text-align: center;
+}
+
+.photo-wrapper h1{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 70px;
+}
+.photo-wrapper p{
+    text-align: center;
+}
+
+.contents img{
+    width: 50%;
+    height: 100%;
+}
+
+.music-wrapper{
+    text-align: center;
+    background-image:url(5849A16D-FCD5-4B1B-BEF9-724A68E6D960.jpg);
+    background-size: cover;
+    color: white;
+    margin-top:60px;
+    
+}
+
+.music-wrapper h1{
+    font-size: 50px;
+    margin-top:60px;
+
+}
+
+.soundcloud{
+    background-color: black;
+    padding-top: 20px;
+    opacity: 0.8;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* 
+.photo-wrapper {
+    text-align: center;
+}
+.photo-wrapper h1{
+    font-size: 55px;
+}
+
+.photo-wrapper img{
+    width: 50%;
+    height: 750px;
+}
+
+.music-wrapper h1{
+    font-size: 60px;
+    text-align: center;
+    border-top: solid 1px black;
+}
+
+.music-wrapper{
+text-align: center;
+} */
+
+
