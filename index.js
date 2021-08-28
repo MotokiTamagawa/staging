@@ -1,5 +1,3 @@
-
-
 function toggleNav() {
     var body = document.body;
     var hamburger = document.getElementById('js-hamburger');
